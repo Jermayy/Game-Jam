@@ -1,6 +1,9 @@
 module.exports = (sequelize, DataTypes) => {
     const Game = sequelize.define("Game", {
-        name_of_game: {
+        rank: {
+            type: DataTypes.INTEGER
+        },
+        name: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
@@ -14,8 +17,8 @@ module.exports = (sequelize, DataTypes) => {
                 len: [1]
             }
         },
-        score: {
-            type: DataTypes.FLOAT,
+        year: {
+            type: DataTypes.INTEGER,
         },
         genre: {
             type: DataTypes.STRING,
@@ -23,7 +26,31 @@ module.exports = (sequelize, DataTypes) => {
             validate: {
                 len: [1]
             }
+        },
+        publisher: {
+            type: DataTypes.TEXT,
+            allowNull: false,
+            validate: {
+                len: [1]
+            }
+        },
+        NA_Sales: {
+            type: DataTypes.DECIMAL(4, 2)
+        },
+        EU_Sales: {
+            type: DataTypes.DECIMAL(4, 2)
+        },
+        JP_Sales: {
+            type: DataTypes.DECIMAL(4, 2)
+        },
+        Other_Sales: {
+            type: DataTypes.DECIMAL(4, 2)
+        },
+        Global_Sales: {
+            type: DataTypes.DECIMAL(4, 2)
         }
+    }, {
+        timestamps: false
     });
     return Game;
 };
