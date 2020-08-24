@@ -1,6 +1,21 @@
 <h1>Gaming JAM</h1>
 
 <div>
-    {{ game-block }}
+    <form>
+        <label for="gameSearch">Game Search:</label><br>
+        <input type="text" id="gameSearch" name="gameSearch"><br>
+        <input type="submit" value="Submit">
+    </form>
 </div>
 
+<div>
+    {{ outputScore }}
+</div>
+
+<div>
+    {{ outputPlatform }}
+</div>
+
+<div>
+    {{ outputGenre }}
+</div>

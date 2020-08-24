@@ -1,3 +1,5 @@
+<!-- HTML Building Code - REFERENCE ONLY! -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +14,32 @@
 </head>
 
 <body>
-    {{ body }}
+
+    <h1>Gaming JAM</h1>
+
+    <div>
+        <form>
+            <label for="gameSearch">Game Search:</label><br>
+            <input type="text" id="gameSearch" name="gameSearch"><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <div>
+        <h2>Game Score:</h2>
+        {{ outputScore }}
+    </div>
+
+    <div>
+        <h2>Game Platform:</h2>
+        {{ outputPlatform }}
+    </div>
+
+    <div>
+        <h2>Game Genre:</h2>
+        {{ outputGenre }}
+    </div>
+
 </body>
 
 </html>
