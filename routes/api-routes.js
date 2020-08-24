@@ -22,7 +22,7 @@ module.exports = app => {
   });
 
   // Get route for returning games of a specific platform
-  app.get("/api/games/platform/:platform", (req, res) => {
+  app.get("/api/games/:platform", (req, res) => {
     db.Game.findAll({
       where: {
         platform: req.params.platform
@@ -32,22 +32,19 @@ module.exports = app => {
     });
   });
 
-  // Get route for retrieving a single game
-  app.get("/api/games/:id", (req, res) => {
-    db.Game.findOne({
-      where: {
-        id: req.params.id
-      }
-    }).then(dbGame => {
-      res.json(dbGame);
-    });
-
-    // db.sequelize.query("SELECT * FROM games WHERE id = ?", {
-    //     replacements: [req.params.id],
-    //     type: Sequelize.QueryTypes.SELECT
-    // }).then((dbGame) => {
-    //     res.json(dbGame);
-    // })
+  // Get route for retrieving games based on a partial search of a given keyword
+  app.get("/api/games/name/:name", (req, res) => {
+    db.sequelize
+      .query(
+        "SELECT * from games join scores on games.name = scores.game and games.platform = scores.platform where game like ?",
+        {
+          replacements: ["%" + req.params.name + "%"],
+          type: Sequelize.QueryTypes.SELECT
+        }
+      )
+      .then(dbGame => {
+        res.json(dbGame);
+      });
   });
 
   // POST route for saving a new game
