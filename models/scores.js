@@ -23,13 +23,6 @@ module.exports = (sequelize, DataTypes) => {
             validate: {
                 len: [1]
             }
-        },
-        genre: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                len: [1]
-            }
         }
     }, {
         timestamps: false

@@ -35,21 +35,21 @@ module.exports = (app) => {
 
     // Get route for retrieving a single game
     app.get("/api/games/:id", (req, res) => {
-        // db.Game.findOne({
-        //         where: {
-        //             id: req.params.id
-        //         }
-        //     })
-        //     .then((dbGame) => {
-        //         res.json(dbGame);
-        //     });
+        db.Game.findOne({
+                where: {
+                    id: req.params.id
+                }
+            })
+            .then((dbGame) => {
+                res.json(dbGame);
+            });
 
-        db.sequelize.query("SELECT * FROM games WHERE id = ?", {
-            replacements: [req.params.id],
-            type: Sequelize.QueryTypes.SELECT
-        }).then((dbGame) => {
-            res.json(dbGame);
-        })
+        // db.sequelize.query("SELECT * FROM games WHERE id = ?", {
+        //     replacements: [req.params.id],
+        //     type: Sequelize.QueryTypes.SELECT
+        // }).then((dbGame) => {
+        //     res.json(dbGame);
+        // })
     });
 
     // POST route for saving a new game
