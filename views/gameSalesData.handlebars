@@ -1,0 +1,69 @@
+<h1>Gaming JAM | Games Sales Data</h1>
+
+<div>
+    <form>
+        <label for="gameSalesSearch">Game Search:</label><br>
+        <input type="text" id="gameSalesSearch" name="gameSalesSearch"><br>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+<section class="container m-5 p-5">
+
+    <div class="row">
+        <div class="col-3-sm ml-1 mr-1">
+            <h2>Game Rank:</h2>
+            {{ outputGameRank }}
+        </div>
+
+        <div class="col-3-sm ml-1 mr-1">
+            <h2>Game Name:</h2>
+            {{ outputGameName }}
+        </div>
+
+        <div class="col-3-sm ml-1 mr-1">
+            <h2>Game Platform:</h2>
+            {{ outputGamePlatform }}
+        </div>
+
+        <div class="col-3-sm ml-1 mr-1">
+            <h2>Game Year:</h2>
+            {{ outputGameYear }}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4-sm ml-1 mr-1">
+            <h2>Game Publisher:</h2>
+            {{ outputGamePublisher }}
+        </div>
+
+        <div class="col-4-sm ml-1 mr-1">
+            <h2>Game NA Sales:</h2>
+            {{ outputGameNASales }}
+        </div>
+
+        <div class="col-4-sm ml-1 mr-1">
+            <h2>Game EU Sales:</h2>
+            {{ outputGameEUSales }}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4-sm ml-1 mr-1">
+            <h2>Game JP Sales:</h2>
+            {{ outputGameJPSales }}
+        </div>
+
+        <div class="col-4-sm ml-1 mr-1">
+            <h2>Game Other Sales:</h2>
+            {{ outputGameOtherSales }}
+        </div>
+
+        <div class="col-4-sm ml-1 mr-1">
+            <h2>Game Global Sales:</h2>
+            {{ outputGameGlobalSales }}
+        </div>
+    </div>
+
+</section>
