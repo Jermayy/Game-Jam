@@ -3,7 +3,7 @@
 //
 // ******************************************************************************
 
-require('dotenv').config();
+require("dotenv").config();
 
 // *** Dependencies
 // =============================================================
@@ -18,20 +18,30 @@ const PORT = process.env.PORT || 8080;
 app.use(express.static("public"));
 
 // Set Handlebars.
+const Handlebars = require("handlebars");
 const exphbs = require("express-handlebars");
+const {
+  allowInsecurePrototypeAccess
+} = require("@handlebars/allow-prototype-access");
 
-app.engine("handlebars", exphbs({
+app.engine(
+  "handlebars",
+  exphbs({
+    handlebars: allowInsecurePrototypeAccess(Handlebars),
     defaultLayout: "main"
-}));
+  })
+);
 app.set("view engine", "handlebars");
 
 // Requiring our models for syncing
 const db = require("./models");
 
 // Sets up the Express app to handle data parsing
-app.use(express.urlencoded({
+app.use(
+  express.urlencoded({
     extended: true
-}));
+  })
+);
 app.use(express.json());
 
 // Static directory
@@ -47,7 +57,7 @@ require("./routes/api-routes.js")(app);
 // =============================================================
 
 db.sequelize.sync().then(() => {
-    app.listen(PORT, () => {
-        console.log("App listening on PORT " + PORT);
-    });
+  app.listen(PORT, () => {
+    console.log("App listening on PORT " + PORT);
+  });
 });
