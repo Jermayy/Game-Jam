@@ -1,1 +1,3 @@
-CREATE database gamesdb;
+DROP DATABASE IF EXISTS gamesdb;
+
+CREATE DATABASE gamesdb;
