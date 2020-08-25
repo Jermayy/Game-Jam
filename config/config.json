@@ -1,10 +1,7 @@
 {
     "development": {
-        "username": "root",
-        "password": "",
-        "database": "gamesdb",
-        "host": "127.0.0.1",
-        "dialect": "mysql"
+        "dialect": "mysql",
+        "use_env_variable": "GAMES_DB_URL"
     },
     "test": {
         "username": "root",
