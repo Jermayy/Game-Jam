@@ -14,11 +14,11 @@ const Sequelize = require("sequelize");
 module.exports = app => {
   // GET route for getting all of the games
   app.get("/", (req, res) => {
-    db.Game.findAll({}).then(dbGame => {
-      res.render("index", {
-        games: dbGame
-      });
+    // db.Game.findAll({}).then(dbGame => {
+    res.render("index", {
+      games: []
     });
+    // });
   });
 
   // Get route for returning games of a specific platform
