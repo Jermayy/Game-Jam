@@ -1,25 +1,18 @@
 /* ////////////////////// */
 /* // Navigational Bar // */
 /* ////////////////////// */
-.topNavigationBar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.navigationBar {
+    margin: 25px 0px 0px 0px;
 }
 
-.gamerJamNavLogoBox {
-    width: 150px;
-    height: auto;
-    padding: 25px 0px 15px 0px;
-}
 
 .navigationBarButton {
-    color: grey;
+    color:white;
     padding: 0px 25px 0px 25px;
 }
 
 .navigationBarButton:hover {
-    color: lightseagreen;
+    color: rgb(15, 52, 121);
     text-decoration: none;
 }
 
