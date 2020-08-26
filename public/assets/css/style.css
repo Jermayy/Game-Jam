@@ -1,11 +1,14 @@
+/* ////////////////////// */
+/* // Navigational Bar // */
+/* ////////////////////// */
 .topNavigationBar {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.gamerJamLogo {
-    width: 120px;
+.gamerJamNavLogoBox {
+    width: 150px;
     height: auto;
     padding: 25px 0px 15px 0px;
 }
@@ -20,6 +23,9 @@
     text-decoration: none;
 }
 
+/* //////////////////// */
+/* //// Hero Image //// */
+/* //////////////////// */
 .heroImage {
     background-image: url("../images/gamerJamHeroImagePlaceHolder.jpg");
     background-repeat: no-repeat;
@@ -35,3 +41,15 @@
     justify-content: center;
     align-items: center;
 }
+
+.heroLogo {
+    width: 300px;
+    height: auto;
+}
+
+/* Naviation Bar 600px Media Break */
+@media only screen and (max-width: 600px) {
+    .navigationBarButtons {
+      display: none;
+    }
+  }
