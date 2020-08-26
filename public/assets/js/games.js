@@ -1,23 +1,48 @@
-$(document).ready(function() {
-    console.log("ready!");
+$(document).ready(() => {
+  console.log("ready!");
 
-    $("#submitBtn").on("click", event => {
-        event.preventDefault();
+  $("#submitBtn").on("click", event => {
+    event.preventDefault();
 
-        const searchValue = $("#gameSearch").val().trim();
+    const gameNameValue = $("#gameSearch")
+      .val()
+      .trim();
 
-        $.get("/api/games/name/" + searchValue, (data) => {
-            console.log(data);
+    const genreValue = $("#genre").val();
+    console.log(genreValue);
 
-        })
+    const platformValue = $("#platforms").val();
+    console.log(platformValue);
 
-
-    });
-
-
-
-
-
+    if (genreValue === "none" && platformValue === "none") {
+      $.get("/api/games/" + gameNameValue, data => {
+        console.log(data);
+      });
+    } else if (genreValue === "none") {
+      $.get(
+        "/api/gamesplatforms/" + gameNameValue + "/" + platformValue,
+        data => {
+          console.log(data);
+        }
+      );
+    } else if (platformValue === "none") {
+      $.get("/api/gamesgenre/" + gameNameValue + "/" + genreValue, data => {
+        console.log(data);
+      });
+    } else {
+      $.get(
+        "/api/gamesgenreplatform/" +
+          gameNameValue +
+          "/" +
+          genreValue +
+          "/" +
+          platformValue,
+        data => {
+          console.log(data);
+        }
+      );
+    }
+  });
 });
 
 // $.get("/api/posts" + categoryString, (data) => {
@@ -29,12 +54,6 @@ $(document).ready(function() {
 //         initializeRows();
 //     }
 // });
-
-
-
-
-
-
 
 // $(".create-form").on("submit", (event) => {
 //     // Make sure to preventDefault on a submit event.
