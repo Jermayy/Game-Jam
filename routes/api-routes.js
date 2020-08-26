@@ -22,23 +22,28 @@ module.exports = app => {
   });
 
   // Get route for returning games of a specific platform
-  app.get("/api/games/:platform", (req, res) => {
-    db.Game.findAll({
-      where: {
-        platform: req.params.platform
-      }
-    }).then(dbGame => {
-      res.json(dbGame);
-    });
-  });
+  // app.get("/api/games/:platform", (req, res) => {
+  //   db.Game.findAll({
+  //     where: {
+  //       platform: req.params.platform
+  //     }
+  //   }).then(dbGame => {
+  //     res.json(dbGame);
+  //   });
+  // });
 
   // Get route for retrieving games based on a partial search of a given keyword
-  app.get("/api/games/name/:name", (req, res) => {
+  app.get("/api/games/:name/:genre/:platform", (req, res) => {
     db.sequelize
       .query(
-        "SELECT * from games join scores on games.name = scores.game and games.platform = scores.platform where game like ?",
+        "SELECT * from games join scores on games.name = scores.game and games.platform = scores.platform where ((game like ?) and (scores.genre like ?)) and ((game like ?) and (scores.platform like ?));",
         {
-          replacements: ["%" + req.params.name + "%"],
+          replacements: [
+            "%" + req.params.name + "%",
+            "%" + req.params.genre + "%",
+            "%" + req.params.name + "%",
+            "%" + req.params.platform + "%"
+          ],
           type: Sequelize.QueryTypes.SELECT
         }
       )
