@@ -72,24 +72,52 @@
     <h2>Results:</h2>
 </section>
 
-<ul>
-    {{#each games}}
-    <li>
-        <p><span class="label">ID:</span> {{this.id}}</p>
-        <p><span class="label">Game title:</span> {{this.name}}</p>
-        <p><span class="label">Platform:</span> {{this.platform}}</p>
-        <p><span class="label">Year released:</span> {{this.year}}</p>
-        <p><span class="label">Genere:</span> {{this.genre}}</p>
-        <p><span class="label">Publisher:</span> {{this.publisher}}</p>
-        <p><span class="label">North America Sales:</span> {{this.NA_Sales}} million copies</p>
-        <p><span class="label">Europe sales:</span> {{this.EU_Sales}} million copies</p>
-        <p><span class="label">Japan sales:</span> {{this.JP_Sales}} million copies</p>
-        <p><span class="label">Rest of the world sales:</span> {{this.Other_Sales}} million copies</p>
-        <p><span class="label">Overall global sales:</span> {{this.Global_Sales}} million copies</p>
+<section class="container-fluid gameInformationOutputSection">
 
-        <button data-id="{{this.id}}" class="delquote">Delete</button>
+    <section>
+        <ul>
+            {{#each games}}
+            <li class="gameInformationOutputItem">
+                <section class="gameInfoOutputTitleSection">
+                    <p class="gameInfoOutputGameTitle">{{this.name}}</p>
+                </section>
+                <section class="gameInfoOutputGameImageSection">
+                    <img class="gameInfoOutputGameImage" src="https://placedog.net/300/300?random">
+                </section>
 
-        <a href="/{{this.name}}">Update this quote</a>
-    </li>
-    {{/each}}
-</ul>
+                <section class="gameInformationOutputDataSection">
+
+                    <div class="gameInformationOutputDataOutputElement">
+                        <p class="gameInformationOutputDataOutputElementTitle">Platform:
+                        <p class="gameInformationOutputDataOutputElementOutput">{{this.platform}}</p>
+                    </div>
+
+                    <div class="gameInformationOutputDataOutputElement">
+                        <p class="gameInformationOutputDataOutputElementTitle">Year released:</p>
+                        <p class="gameInformationOutputDataOutputElementOutput">{{this.year}}</p>
+                    </div>
+
+                    <div class="gameInformationOutputDataOutputElement">
+                        <p class="gameInformationOutputDataOutputElementTitle">Genre:</p>
+                        <p class="gameInformationOutputDataOutputElementOutput">{{this.genre}}</p>
+                    </div>
+
+                    <div class="gameInformationOutputDataOutputElement">
+                        <p class="gameInformationOutputDataOutputElementTitle">Publisher:</p>
+                        <p class="gameInformationOutputDataOutputElementOutput">{{this.publisher}}</p>
+                    </div>
+
+                </section>
+
+                <section class="gameInfoOutputGlobalSalesSection">
+                    <div class="gameInfoOutputGlobalSalesSectionBody">
+                        <p class="gameInfoOutputGlobalSalesTitle">Global Sales:</p>
+                        <p class="gameInfoOutputGlobalSalesOutput">{{this.Global_Sales}} million copies</p>
+                    </div>
+                </section>
+            </li>
+            {{/each}}
+        </ul>
+    </section>
+
+</section>
