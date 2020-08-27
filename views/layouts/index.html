@@ -40,7 +40,7 @@
             "></i></a>
             <a href="https://www.linkedin.com/in/mohammadpishdar/"><i class="fab fa-linkedin socialMediaIcon
             "></i></a>
-            <a href="https://www.linkedin.com/in/mohammadpishdar/"><i class="fab fa-twitter-square socialMediaIcon
+            <a href="https://twitter.com/aBuiDev"><i class="fab fa-twitter-square socialMediaIcon
             "></i></a>
         </div>
     </section>
@@ -120,50 +120,34 @@
 
 
 
+    <section class="container-fluid gameInformationOutputSection">
+        <section>
+            <ul>
+                {{#each games}}
+                <li class="gameInformationOutputItem">
+                    <div class="gameInfoOutputTitleSection">
+                        <p class="gameInfoOutputGameTitle">{{this.name}}</p>
+                    </div>
+                    <p><span class="gameInfoOutput">Platform:</span>{{this.platform}}</p>
+                    <p><span class="gameInfoOutput">Year released:</span>{{this.year}}</p>
+                    <p><span class="gameInfoOutput">Genre:</span>{{this.genre}}</p>
+                    <p><span class="gameInfoOutput">Publisher:</span>{{this.publisher}}</p>
 
+                    <p><span class="gameInfoOutput">Overall global sales:</span>{{this.Global_Sales}} million copies</p>
 
-    <ul>
-        {{#each games}}
-        <li>
-            <p><span class="label">ID:</span> {{this.id}}</p>
-            <p><span class="label">Game title:</span> {{this.name}}</p>
-            <p><span class="label">Platform:</span> {{this.platform}}</p>
-            <p><span class="label">Year released:</span> {{this.year}}</p>
-            <p><span class="label">Genere:</span> {{this.genre}}</p>
-            <p><span class="label">Publisher:</span> {{this.publisher}}</p>
-            <p><span class="label">North America Sales:</span> {{this.NA_Sales}} million copies</p>
-            <p><span class="label">Europe sales:</span> {{this.EU_Sales}} million copies</p>
-            <p><span class="label">Japan sales:</span> {{this.JP_Sales}} million copies</p>
-            <p><span class="label">Rest of the world sales:</span> {{this.Other_Sales}} million copies</p>
-            <p><span class="label">Overall global sales:</span> {{this.Global_Sales}} million copies</p>
+                    <p><span class="gameInfoOutput">North America Sales:</span>{{this.NA_Sales}} million copies</p>
+                    <p><span class="gameInfoOutput">Europe sales:</span>{{this.EU_Sales}} million copies</p>
+                    <p><span class="gameInfoOutput">Japan sales:</span>{{this.JP_Sales}} million copies</p>
+                    <p><span class="gameInfoOutput">Rest of the world sales:</span>{{this.Other_Sales}} million copies
+                    </p>
 
-            <button data-id="{{this.id}}" class="delquote">Delete</button>
-
-            <a href="/{{this.name}}">Update this quote</a>
-        </li>
-        {{/each}}
-    </ul>
-
-    <section class="container m-5 p-5">
-        <div class="row">
-            <div class="col-3-sm ml-1 mr-1">
-                {{ outputScore }}
-            </div>
-
-            <div class="col-3-sm ml-1 mr-1">
-                {{ outputScore }}
-            </div>
-
-            <div class="col-3-sm ml-1 mr-1">
-                {{ outputPlatform }}
-            </div>
-
-            <div class="col-3-sm ml-1 mr-1">
-                {{ outputGenre }}
-            </div>
-        </div>
+                    <p><span class="gameInfoOutput">ID:</span>{{this.id}}</p>
+                </li>
+                {{/each}}
+            </ul>
+        </section>
     </section>
-    </section>
+
     <!-- index.handlebars closing -->
 
     <footer class="container-fluid">
