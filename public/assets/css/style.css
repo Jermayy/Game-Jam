@@ -73,10 +73,12 @@
     font-size: 25px;
     color: white;
     margin: 0px 10px 0px 10px;
+    transition: 0.5s;
 }
 
 .socialMediaIcon:hover {
    color: lightseagreen;
+   transform: scale(1.2);
 }
 
 .gameJamFooter {
@@ -98,6 +100,10 @@
     width: 70%;
 }
 
+.labelText {
+    margin: 0px 0px 10px 0px;
+}
+
 .formSearchAndSubmit {
     display: flex;
     justify-content: space-between;
@@ -111,12 +117,22 @@
 
 .formSearchInputBar {
     max-width: 100%;
+    height: 30px;
+    background-color: rgb(0, 81, 128);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    transition: 0.5s;
+}
+
+.formSearchInputBar:focus {
+    outline: none;
 }
 
 .formDropDownSection {
     display: flex;
     flex-direction: row;
-    justify-content: 
+    justify-content: center; 
 }
 
 .formDropDowns {
@@ -126,6 +142,24 @@
     flex-direction: column;
 }
 
+.formDropDown {
+    height: 30px;
+    background-color: rgb(0, 81, 128);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    transition: 0.5s;
+}
+
+.formDropDown:hover {
+    transform: scale(1.05);
+    border-radius: 10px 10px 0px 0px;
+}
+
+.formDropDown:focus {
+    outline: none;
+}
+
 .formSubmit {
     margin: 25px;
     display: flex;
@@ -133,8 +167,21 @@
 }
 
 .submitButtonStyle {
-    width: 50%;
+    width: 100%;
+    height: 50px;
+    border: solid rgb(255, 217, 0);
+    border-radius: 15px;
+    color:  rgb(255, 217, 0);
+    background-color: #0f1923;
+    transition: 0.5s;
 }
+
+.submitButtonStyle:hover {
+    color:  rgb(51, 51, 51);
+    background-color: rgb(255, 217, 0);
+    transform: scale(1.015);
+}
+
 
 
 
