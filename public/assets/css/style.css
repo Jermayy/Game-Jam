@@ -9,10 +9,12 @@
 .navigationBarButton {
     color:white;
     padding: 0px 25px 0px 25px;
+    transition: 0.5s;
 }
 
 .navigationBarButton:hover {
     color: rgb(15, 52, 121);
+    transform: scale(1.05);
     text-decoration: none;
 }
 
@@ -82,11 +84,21 @@
 }
 
 .gameJamFooter {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
 
+.gameJamFooterContent {
+    color: rgb(255, 217, 0);
+    text-align: center;
+    font-size: 12px;
 }
 
 .gameJamMainBody {
     background-color: #0f1923;
+    font-family: 'Nanum Gothic', sans-serif;
 }
 
 .gameJamMainOutputBody {
@@ -123,6 +135,10 @@
     border-radius: 10px;
     border: none;
     transition: 0.5s;
+}
+
+.formSearchInputBar:hover {
+    transform: scale(1.05);
 }
 
 .formSearchInputBar:focus {
