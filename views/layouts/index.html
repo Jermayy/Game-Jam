@@ -119,8 +119,12 @@
     </section>
 
 
+    <section class="gameInformationOutputSectionTitle">
+        <h2>Game Results:</h2>
+    </section>
 
     <section class="container-fluid gameInformationOutputSection">
+
         <section>
             <ul>
                 {{#each games}}
@@ -134,12 +138,6 @@
                     <p><span class="gameInfoOutput">Publisher:</span>{{this.publisher}}</p>
 
                     <p><span class="gameInfoOutput">Overall global sales:</span>{{this.Global_Sales}} million copies</p>
-
-                    <p><span class="gameInfoOutput">North America Sales:</span>{{this.NA_Sales}} million copies</p>
-                    <p><span class="gameInfoOutput">Europe sales:</span>{{this.EU_Sales}} million copies</p>
-                    <p><span class="gameInfoOutput">Japan sales:</span>{{this.JP_Sales}} million copies</p>
-                    <p><span class="gameInfoOutput">Rest of the world sales:</span>{{this.Other_Sales}} million copies
-                    </p>
 
                     <p><span class="gameInfoOutput">ID:</span>{{this.id}}</p>
                 </li>
