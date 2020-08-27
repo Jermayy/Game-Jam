@@ -14,7 +14,6 @@
 
 .navigationBarButton:hover {
     color: rgb(15, 52, 121);
-    transform: scale(1.05);
     text-decoration: none;
 }
 
@@ -129,6 +128,7 @@
 
 .formSearchInputBar {
     max-width: 100%;
+    padding: 20px;
     height: 30px;
     background-color: rgb(0, 81, 128);
     color: white;
@@ -160,6 +160,7 @@
 
 .formDropDown {
     height: 30px;
+    padding: 20px;
     background-color: rgb(0, 81, 128);
     color: white;
     border-radius: 10px;
