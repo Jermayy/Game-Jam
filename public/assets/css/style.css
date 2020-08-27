@@ -133,8 +133,8 @@
 
 .formSearchInputBar {
     max-width: 100%;
-    padding: 20px;
-    height: 30px;
+    padding: 5px;
+    height: 50px;
     background-color: rgb(0, 81, 128);
     color: white;
     border-radius: 10px;
@@ -164,8 +164,8 @@
 }
 
 .formDropDown {
-    height: 30px;
-    padding: 20px;
+    height: 50px;
+    padding: 5px;
     background-color: rgb(0, 81, 128);
     color: white;
     border-radius: 10px;
@@ -207,9 +207,21 @@
 
 /* Game Information Output Section */
 .gameInformationOutputSection {
+    background-color: #040c14;
+    padding: 50px;
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
+}
+
+.gameInformationOutputSectionTitle {
+    margin-top: 50px;
+    background-color: #040c14;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .gameInformationOutputItem {
@@ -238,6 +250,8 @@
 .gameInformationOutputItem {
 
 }
+
+
 
 /* Naviation Bar 600px Media Break */
 /* @media only screen and (max-width: 600px) {
