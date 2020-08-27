@@ -74,6 +74,65 @@
    color: lightseagreen;
 }
 
+.gameJamFooter {
+
+}
+
+.gameJamMainBody {
+    background-color: #0f1923;
+}
+
+.gameJamMainOutputBody {
+    max-width: 70%;
+    display: flex;
+    justify-content: center;
+    color: rgb(255, 217, 0);
+}
+
+.formBody {
+    width: 70%;
+}
+
+.formSearchAndSubmit {
+    display: flex;
+    justify-content: space-between;
+}
+
+.formSearchSection {
+    margin: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formSearchInputBar {
+    max-width: 100%;
+}
+
+.formDropDownSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: 
+}
+
+.formDropDowns {
+    width: 50%;
+    margin: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formSubmit {
+    margin: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.submitButtonStyle {
+    width: 50%;
+}
+
+
+
 /* Naviation Bar 600px Media Break */
 @media only screen and (max-width: 600px) {
     .navigationBarButtons {

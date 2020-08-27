@@ -14,10 +14,9 @@
     <script src="../../public/assets/js/games.js"></script>
 </head>
 
-<body>
-
+<body class="gameJamMainBody">
     </section>
-    <section class="container-fluid heroImage">
+    <section class=" container-fluid heroImage">
         <div class="row navigationBar">
             <div class="navigationBarButtons">
                 <a class="navigationBarButton" href="#">Home</a>
@@ -38,16 +37,105 @@
         </div>
         <div class="row socialMediaIconArray">
             <a href="https://github.com/Jermayy/Project_2.git"><i class="fab fa-github-square socialMediaIcon
-                "></i></a>
+            "></i></a>
             <a href="https://www.linkedin.com/in/mohammadpishdar/"><i class="fab fa-linkedin socialMediaIcon
-                "></i></a>
+            "></i></a>
             <a href="https://www.linkedin.com/in/mohammadpishdar/"><i class="fab fa-twitter-square socialMediaIcon
-                "></i></a>
-
+            "></i></a>
         </div>
     </section>
-    <!-- {{{ body }}} -->
-    <footer>
+
+    {{{ body }}}
+
+    <!-- index.handlebars opening -->
+    <section class="container gameJamMainOutputBody">
+        <form class="formBody">
+            <div class="formSearchAndSubmitBody">
+                <div class="formSearchSection">
+                    <label for="gameSearch">Game Search:</label>
+                    <input class="formSearchInputBar" type="text" id="gameSearch" name="gameSearch">
+                </div>
+            </div>
+            <section class="formDropDownSection">
+                <div class="formDropDowns">
+                    <label for="genre">Genre:</label>
+                    <select name="genre" id="genre">
+                        <option value="none"></option>
+                        <option value="action">action</option>
+                        <option value="platformer">platformer</option>
+                        <option value="racing">racing</option>
+                    </select>
+                </div>
+                <div class="formDropDowns">
+                    <label for="cars">Platform:</label>
+                    <select name="platforms" id="platforms">
+                        <option value="none"></option>
+                        <option value="wii">wii</option>
+                        <option value="nintendo">nintendo</option>
+                    </select>
+                </div>
+            </section>
+            <div class="formSubmit">
+                <button class="submitButtonStyle" id="submitBtn">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </section>
+
+
+
+
+
+    <ul>
+        {{#each games}}
+        <li>
+            <p><span class="label">ID:</span> {{this.id}}</p>
+            <p><span class="label">Game title:</span> {{this.name}}</p>
+            <p><span class="label">Platform:</span> {{this.platform}}</p>
+            <p><span class="label">Year released:</span> {{this.year}}</p>
+            <p><span class="label">Genere:</span> {{this.genre}}</p>
+            <p><span class="label">Publisher:</span> {{this.publisher}}</p>
+            <p><span class="label">North America Sales:</span> {{this.NA_Sales}} million copies</p>
+            <p><span class="label">Europe sales:</span> {{this.EU_Sales}} million copies</p>
+            <p><span class="label">Japan sales:</span> {{this.JP_Sales}} million copies</p>
+            <p><span class="label">Rest of the world sales:</span> {{this.Other_Sales}} million copies</p>
+            <p><span class="label">Overall global sales:</span> {{this.Global_Sales}} million copies</p>
+
+            <button data-id="{{this.id}}" class="delquote">Delete</button>
+
+            <a href="/{{this.name}}">Update this quote</a>
+        </li>
+        {{/each}}
+    </ul>
+
+    <section class="container m-5 p-5">
+        <div class="row">
+            <div class="col-3-sm ml-1 mr-1">
+                {{ outputScore }}
+            </div>
+
+            <div class="col-3-sm ml-1 mr-1">
+                {{ outputScore }}
+            </div>
+
+            <div class="col-3-sm ml-1 mr-1">
+                {{ outputPlatform }}
+            </div>
+
+            <div class="col-3-sm ml-1 mr-1">
+                {{ outputGenre }}
+            </div>
+        </div>
+    </section>
+    </section>
+    <!-- index.handlebars closing -->
+
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="gameJamFooter">
+            </div>
+        </div>
     </footer>
 </body>
 
