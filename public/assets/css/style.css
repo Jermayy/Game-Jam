@@ -227,16 +227,13 @@
 .gameInformationOutputItem {
     margin: 15px;
     border: solid;
-    border-radius: 15px;
-    border-color: rgb(37, 194, 168)
+    border-color: rgb(0, 81, 128);
 }
 
 .gameInfoOutputTitleSection {
     margin: 0 auto;
     width: 100%;
     padding: 25px 0px 25px 0px;
-    border-radius: 10px 10px 0px 0px;
-    background-color: rgb(37, 194, 168);
     display: flex;
     justify-content: center;
 }
@@ -244,14 +241,51 @@
 .gameInfoOutputGameTitle {
     font-size: 20px;
     font-weight: bold;
-    color:white;
+    color:rgb(130, 34, 255);
 }
 
-.gameInformationOutputItem {
-
+.gameInfoOutputGameImageSection {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content: center;
 }
 
+.gameInfoOutputGameImage {
+    background: transparent no-repeat center;
+    background-size: cover;
+    width: 100%;
+}
 
+.gameInformationOutputDataSection {
+    margin: 25px;
+}
+
+.gameInformationOutputDataOutput {
+    margin: 10px 0px 10px 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.gameInfoOutputGlobalSalesSection {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.gameInfoOutputGlobalSalesSectionBody {
+    padding: 20px;
+    margin: 0 10px 10px 10px;
+    background-color: rgb(255, 217, 0);
+}
+
+.gameInfoOutputGlobalSalesTitle {
+    margin: 0px 0px 15px 0px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
 
 /* Naviation Bar 600px Media Break */
 /* @media only screen and (max-width: 600px) {
