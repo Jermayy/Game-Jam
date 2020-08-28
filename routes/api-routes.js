@@ -100,43 +100,28 @@ module.exports = app => {
       });
   });
 
-  // POST route for saving a new game
+  // POST route for creating a new game
   app.post("/api/games", (req, res) => {
     console.log(req.body);
     db.Game.create({
-      rank: req.body.rank,
       name: req.body.name,
       platform: req.body.platform,
       year: req.body.year,
       genre: req.body.genre,
       publisher: req.body.publisher,
-      NA_Sales: req.body.NA_Sales,
-      EU_Sales: req.body.EU_Sales,
-      JP_Sales: req.body.JP_Sales,
-      Other_Sales: req.body.Other_Sales,
       Global_Sales: req.body.Global_Sales
     }).then(dbGame => {
       res.json(dbGame);
     });
   });
-
-  // DELETE route for deleting games
-  app.delete("/api/games/:id", (req, res) => {
-    db.Game.destroy({
-      where: {
-        id: req.params.id
-      }
-    }).then(dbGame => {
-      res.json(dbGame);
-    });
-  });
-
-  // PUT route for updating games
-  app.put("/api/games", (req, res) => {
-    db.Game.update(req.body, {
-      where: {
-        id: req.body.id
-      }
+// POST route for creating a new score
+  app.post("/api/scores", (req, res) => {
+    console.log(req.body);
+    db.Score.create({
+      game: req.body.game,
+      platform: req.body.platform,
+      score: req.body.score,
+      genre: req.body.genre
     }).then(dbGame => {
       res.json(dbGame);
     });
