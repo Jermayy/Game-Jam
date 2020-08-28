@@ -21,15 +21,15 @@ app.use(express.static("public"));
 const Handlebars = require("handlebars");
 const exphbs = require("express-handlebars");
 const {
-    allowInsecurePrototypeAccess
+  allowInsecurePrototypeAccess
 } = require("@handlebars/allow-prototype-access");
 
 app.engine(
-    "handlebars",
-    exphbs({
-        handlebars: allowInsecurePrototypeAccess(Handlebars),
-        defaultLayout: "main"
-    })
+  "handlebars",
+  exphbs({
+    handlebars: allowInsecurePrototypeAccess(Handlebars),
+    defaultLayout: "main"
+  })
 );
 app.set("view engine", "handlebars");
 
@@ -38,12 +38,11 @@ const db = require("./models");
 
 // Sets up the Express app to handle data parsing
 app.use(
-    express.urlencoded({
-        extended: true
-    })
+  express.urlencoded({
+    extended: true
+  })
 );
 app.use(express.json());
-
 
 // Routes
 // =============================================================
@@ -55,7 +54,7 @@ require("./routes/api-routes.js")(app);
 // =============================================================
 
 db.sequelize.sync().then(() => {
-    app.listen(PORT, () => {
-        console.log("App listening on PORT " + PORT);
-    });
+  app.listen(PORT, () => {
+    console.log("App listening on PORT " + PORT);
+  });
 });
