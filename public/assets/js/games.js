@@ -24,7 +24,7 @@ $(document).ready(() => {
         .split("%20")
         .join(" ");
       $(".formSearchInputBar").attr("value", gameName);
-      $("#platforms option[value=" + "'" + plaformName + "'" + +"]").attr(
+      $("#platforms option[value=" + "'" + plaformName + "'" + "]").attr(
         "selected",
         "selected"
       );
