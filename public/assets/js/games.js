@@ -92,34 +92,18 @@ $(document).ready(() => {
   });
 });
 
-// $.get("/api/posts" + categoryString, (data) => {
-//     console.log("Posts", data);
-//     posts = data;
-//     if (!posts || !posts.length) {
-//         displayEmpty();
-//     } else {
-//         initializeRows();
-//     }
-// });
+// API query:
+const getImage = gameQuery => {
+  apiKey = "";
+  const queryURL =
+    "https://www.gamespot.com/api/games/?api_key=" + apiKey + gameQuery;
 
-// $(".create-form").on("submit", (event) => {
-//     // Make sure to preventDefault on a submit event.
-//     event.preventDefault();
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  }).then(response => {
+    console.log(response);
+  });
+};
 
-//     const newCat = {
-//         name: $("#ca").val().trim(),
-//         sleepy: $("[name=sleepy]:checked").val().trim()
-//     };
-
-//     // Send the POST request.
-//     $.ajax("/api/cats", {
-//         type: "POST",
-//         data: newCat
-//     }).then(
-//         () => {
-//             console.log("created new cat");
-//             // Reload the page to get the updated list
-//             location.reload();
-//         }
-//     );
-// });
+// https://www.gamespot.com/api/games/?api_key=<apiKey>&filter=name:Doom&format=json
