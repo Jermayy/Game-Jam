@@ -224,6 +224,13 @@
     align-items: center;
 }
 
+.gameInformationUnorderdedOutputList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .gameInformationOutputItem {
     margin: 15px;
     border: solid;
