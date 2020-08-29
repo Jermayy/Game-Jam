@@ -1,4 +1,14 @@
 $(document).ready(() => {
+  //A function to empty input field values when we post something to our database
+  function emptyInputFields() {
+    $("#addGameInputName").val("");
+    $("#addGameGenre").val("");
+    $("#addGamePlatforms").val("");
+    $("#addGameYear").val("");
+    $("#addGamePublisher").val("");
+    $("#addGameGlobalSales").val("");
+    $("#addGameIGNScore").val("");
+  }
   //retaining the input fileds value from the url so we have our search keywords and clauses back in place after the redirect
   function populateInputFields() {
     const urlAdress = window.location.href.split("/");
@@ -50,6 +60,7 @@ $(document).ready(() => {
   //runing the function above on page load to ensure populating the input fields
   window.onload = populateInputFields;
 
+  //Running different get routes for different search query types when the user clikcs the search button
   $("#submitBtn").on("click", event => {
     event.preventDefault();
     //Getting the values out of the input fields and dropdown boxes and storing them inside const variables
@@ -138,20 +149,82 @@ $(document).ready(() => {
       platformValue = platformValue;
     }
   });
+
+  //Adding new games to both tables using only necessary fields for our search queries when the user clicks add a game button
+  $("#addGameButtton").on("click", event => {
+    event.preventDefault();
+
+    // Don't do anything if the name, year, publisher, global sales or IGN scores field hasn't been filled out
+    if (
+      !$("#addGameInputName")
+        .val()
+        .trim() ||
+      $("#addGamePlatforms").val() === "none" ||
+      $("#addGameGenre").val() === "none" ||
+      !$("#addGameYear")
+        .val()
+        .trim() ||
+      !$("#addGamePublisher")
+        .val()
+        .trim() ||
+      !$("#addGameGlobalSales")
+        .val()
+        .trim() ||
+      !$("#addGameIGNScore")
+        .val()
+        .trim()
+    ) {
+      return;
+    }
+
+    const game = {
+      name: $("#addGameInputName")
+        .val()
+        .trim(),
+      platform: $("#addGamePlatforms").val(),
+      year: $("#addGameYear")
+        .val()
+        .trim(),
+      genre: $("#addGameGenre").val(),
+      publisher: $("#addGamePublisher")
+        .val()
+        .trim(),
+      Global_Sales: $("#addGameGlobalSales")
+        .val()
+        .trim()
+    };
+    $.post("/api/games", game);
+
+    const score = {
+      game: $("#addGameInputName")
+        .val()
+        .trim(),
+      platform: $("#addGamePlatforms").val(),
+      score: $("#addGameIGNScore")
+        .val()
+        .trim(),
+      genre: $("#addGameGenre").val()
+    };
+    $.post("/api/scores", score);
+
+    alert("New game has been added to the database");
+    //Calling emptyInputFields function to empty out the fields after we have our success alert
+    emptyInputFields();
+  });
 });
 
 // API query:
-const getImage = gameQuery => {
-  apiKey = "";
-  const queryURL =
-    "https://www.gamespot.com/api/games/?api_key=" + apiKey + gameQuery;
+// const getImage = gameQuery => {
+//   apiKey = "";
+//   const queryURL =
+//     "https://www.gamespot.com/api/games/?api_key=" + apiKey + gameQuery;
 
-  $.ajax({
-    url: queryURL,
-    method: "GET"
-  }).then(response => {
-    console.log(response);
-  });
-};
+//   $.ajax({
+//     url: queryURL,
+//     method: "GET"
+//   }).then(response => {
+//     console.log(response);
+//   });
+// };
 
 // https://www.gamespot.com/api/games/?api_key=<apiKey>&filter=name:Doom&format=json

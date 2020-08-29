@@ -140,19 +140,25 @@
             <div class="formAddGameInputSectionElement">
                 <div class="formAddGameInputElement">
                     <label class="labelText" for="addGameYear">Year:</label>
-                    <input class="formAddGameInputBar" type="text" id="addGameYear" name="addGameYear">
+                    <input class="formAddGameInputBar" type="number" min = "1980" id="addGameYear" name="addGameYear">
+                </div>
+            </div>
+             <div class="formAddGameInputSectionElement">
+                <div class="formAddGameInputElement">
+                    <label class="labelText" for="addGameGlobalSales">Publisher:</label>
+                    <input class="formAddGameInputBar" type="text" id="addGamePublisher" name="addGamePublisher">
                 </div>
             </div>
             <div class="formAddGameInputSectionElement">
                 <div class="formAddGameInputElement">
                     <label class="labelText" for="addGameGlobalSales">Global Sales:</label>
-                    <input class="formAddGameInputBar" type="text" id="addGameGlobalSales" name="addGameGlobalSales">
+                    <input class="formAddGameInputBar" type="number" min="0" id="addGameGlobalSales" name="addGameGlobalSales">
                 </div>
             </div>
             <div class="formAddGameInputSectionElement">
                 <div class="formAddGameInputElement">
                     <label class="labelText" for="addGameIGNScore">IGN Score:</label>
-                    <input class="formAddGameInputBar" type="text" id="addGameIGNScore" name="addGameIGNScore">
+                    <input class="formAddGameInputBar" type="number" min= "0" max = "10" id="addGameIGNScore" name="addGameIGNScore">
                 </div>
             </div>
         </section>

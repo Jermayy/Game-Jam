@@ -14,11 +14,7 @@ const Sequelize = require("sequelize");
 module.exports = app => {
   // GET route for getting all of the games
   app.get("/", (req, res) => {
-    db.Game.findAll({}).then(dbGame => {
-      res.render("index", {
-        games: []
-      });
-    });
+    res.render("index");
   });
 
   // Get route for retrieving games based on a partial search of a given keyword when we choose the genre and the platform
@@ -122,8 +118,26 @@ module.exports = app => {
       platform: req.body.platform,
       score: req.body.score,
       genre: req.body.genre
-    }).then(dbGame => {
+    }).then(dbScore => {
+      res.json(dbScore);
+    });
+  });
+
+  app.get("/api/games", (req, res) => {
+    // findAll returns all entries for a table when used with no options
+    db.Game.findAll({}).then(dbGame => {
+      // We have access to the todos as an argument inside of the callback function
       res.json(dbGame);
     });
   });
+
+  app.get("/api/scores", (req, res) => {
+    // findAll returns all entries for a table when used with no options
+    db.Score.findAll({}).then(dbScore => {
+      // We have access to the todos as an argument inside of the callback function
+      res.json(dbScore);
+    });
+  });
 };
+
+
