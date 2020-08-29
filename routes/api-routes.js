@@ -105,6 +105,7 @@ module.exports = app => {
       year: req.body.year,
       genre: req.body.genre,
       publisher: req.body.publisher,
+      // eslint-disable-next-line camelcase
       Global_Sales: req.body.Global_Sales
     }).then(dbGame => {
       res.json(dbGame);
@@ -139,5 +140,3 @@ module.exports = app => {
     });
   });
 };
-
-

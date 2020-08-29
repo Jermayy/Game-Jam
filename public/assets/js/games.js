@@ -1,4 +1,54 @@
 $(document).ready(() => {
+  //Basic idea to check if the list of games being populated or not
+  // if ($(".gameInformationUnorderdedOutputList").children().length > 0) {
+  //   const listOfDisplayedGames = [];
+  //   const listOfGameNames = $(".gameInfoOutputGameTitle");
+  //   for (let i = 0; i < listOfGameNames.length; i++) {
+  //     listOfDisplayedGames.push({
+  //       name: $(".gameInfoOutputGameTitle")
+  //         .eq(i)
+  //         .text(),
+  //       platform: $(".gameInfoOutputGamePlatform")
+  //         .eq(i)
+  //         .text()
+  //     });
+  //   }
+  //   console.log(listOfDisplayedGames);
+  //   const imageUrls = [];
+
+  //   listOfDisplayedGames.forEach(game => {
+  //     console.log(game.name);
+  //     const queryURL =
+  //       "https://cors-anywhere.herokuapp.com/https://www.gamespot.com/api/games/?api_key=446813c082ce104d89691b086349191612418d2f&filter=name:" +
+  //       game.name +
+  //       "&format=json";
+
+  //     $.ajax({
+  //       url: queryURL,
+  //       async: false,
+  //       method: "GET",
+  //       success: response => {
+  //         console.log(response);
+  //         if (response.number_of_page_results > 0) {
+  //           imageUrls.push({
+  //             name: response.results[0].name,
+  //             url: response.results[0].image.screen_tiny
+  //           });
+  //         }
+  //       }
+  //     });
+  //   });
+  //   console.log(imageUrls);
+
+  //   if (listOfDisplayedGames.length === imageUrls.length) {
+  //     for (let i = 0; i < listOfGameNames.length; i++) {
+  //       $(".gameInfoOutputGameImage")
+  //         .eq(i)
+  //         .attr("src", imageUrls[i].url);
+  //     }
+  //   }
+  // }
+
   //A function to empty input field values when we post something to our database
   function emptyInputFields() {
     $("#addGameInputName").val("");
@@ -189,6 +239,7 @@ $(document).ready(() => {
       publisher: $("#addGamePublisher")
         .val()
         .trim(),
+      // eslint-disable-next-line camelcase
       Global_Sales: $("#addGameGlobalSales")
         .val()
         .trim()
@@ -214,17 +265,6 @@ $(document).ready(() => {
 });
 
 // API query:
-// const getImage = gameQuery => {
-//   apiKey = "";
-//   const queryURL =
-//     "https://www.gamespot.com/api/games/?api_key=" + apiKey + gameQuery;
-
-//   $.ajax({
-//     url: queryURL,
-//     method: "GET"
-//   }).then(response => {
-//     console.log(response);
-//   });
-// };
 
 // https://www.gamespot.com/api/games/?api_key=<apiKey>&filter=name:Doom&format=json
+//data.results[0].image.original
