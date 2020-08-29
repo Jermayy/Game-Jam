@@ -6,10 +6,10 @@ $(document).ready(() => {
       //cleaning the values for any %20s added to them by the browser if there is any space in their name
       const gameName = urlAdress[urlAdress.length - 1].split("%20").join(" ");
       //assigning the captured game name value from the url as the default value for the search box
-      $(".formSearchInputBar").attr("value", gameName);
+      $("#gameSearch").attr("value", gameName);
     } else if (urlAdress[urlAdress.length - 3] === "gamesgenre") {
       const gameName = urlAdress[urlAdress.length - 2].split("%20").join(" ");
-      $(".formSearchInputBar").attr("value", gameName);
+      $("#gameSearch").attr("value", gameName);
       //making the captured genre value as the default value for the dropdown list for genre. Same thing applies for dropdwon list of platforms
       $(
         "#genre option[value=" +
@@ -23,7 +23,7 @@ $(document).ready(() => {
       const plaformName = urlAdress[urlAdress.length - 1]
         .split("%20")
         .join(" ");
-      $(".formSearchInputBar").attr("value", gameName);
+      $("#gameSearch").attr("value", gameName);
       $("#platforms option[value=" + "'" + plaformName + "'" + "]").attr(
         "selected",
         "selected"
@@ -33,7 +33,7 @@ $(document).ready(() => {
       const plaformName = urlAdress[urlAdress.length - 1]
         .split("%20")
         .join(" ");
-      $(".formSearchInputBar").attr("value", gameName);
+      $("#gameSearch").attr("value", gameName);
       $("#platforms option[value=" + "'" + plaformName + "'" + "]").attr(
         "selected",
         "selected"

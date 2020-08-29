@@ -114,7 +114,7 @@ module.exports = app => {
       res.json(dbGame);
     });
   });
-// POST route for creating a new score
+  // POST route for creating a new score
   app.post("/api/scores", (req, res) => {
     console.log(req.body);
     db.Score.create({
