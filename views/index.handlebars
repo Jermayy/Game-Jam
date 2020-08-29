@@ -1,5 +1,9 @@
 <section class="container gameJamMainOutputBody">
+    {{!-- Search Game Input Field --}}
     <form class="formBody">
+        <div class="formTitle">
+            <h1 class="formTitleText"><i class="fas fa-search formTitleIcon"></i>Search Game<h1>
+        </div>
         <div class="formSearchAndSubmitBody">
             <div class="formSearchSection">
                 <label class="labelText" for="gameSearch">Game Search:</label>
@@ -62,17 +66,109 @@
         </section>
         <div class="formSubmit">
             <button class="submitButtonStyle" id="submitBtn">
-                Submit
+                Search
             </button>
         </div>
     </form>
+
+    {{!-- Add Game Input Field --}}
+    <form class="formBody">
+        <div class="formTitle">
+            <h1 class="formTitleText"><i class="fas fa-folder-plus formTitleIcon"></i>Add Game<h1>
+        </div>
+        <div class="formSearchAndSubmitBody">
+            <div class="formSearchSection">
+                <label class="labelText" for="addGameInputName">Game Title:</label>
+                <input class="formSearchInputBar" type="text" id="addGameInputName" name="addGameInputName">
+            </div>
+        </div>
+        <section class="formDropDownSection">
+            <div class="formDropDowns">
+                <label class="labelText" for="addGameGenre">Genre:</label>
+                <select class="formDropDown" name="addGameGenre" id="addGameGenre">
+                    <option value="none"></option>
+                    <option value="Action">Action</option>
+                    <option value="Adventure">Adventure</option>
+                    <option value="Fighting">Fighting</option>
+                    <option value="Misc">misc</option>
+                    <option value="Platform">Platform</option>
+                    <option value="Puzzle">Puzzle</option>
+                    <option value="Racing">Racing</option>
+                    <option value="Role-Playing">Role-Playing</option>
+                    <option value="Shooter">Shooter</option>
+                    <option value="Simulation">Simulation</option>
+                    <option value="Sports">Sports</option>
+                    <option value="Strategy">Strategy</option>
+                </select>
+            </div>
+            <div class="formDropDowns">
+                <label class="labelText" for="addGamePlatforms">Platform:</label>
+                <select class="formDropDown" name="addGamePlatforms" id="addGamePlatforms">
+                    <option value="none"></option>
+                    <option value="3DO">3DO</option>
+                    <option value="Atari 2600">Atari 2600</option>
+                    <option value="Dreamcast">Dreamcast</option>
+                    <option value="Game Boy">Game Boy</option>
+                    <option value="Game Boy Advance">Game Boy Advance</option>
+                    <option value="GameCube">GameCube</option>
+                    <option value="Genesis">Genesis</option>
+                    <option value="N-Gage">N-Gage</option>
+                    <option value="NES">NES</option>
+                    <option value="Nintendo 3DS">Nintendo 3DS</option>
+                    <option value="Nintendo 64">Nintendo 64</option>
+                    <option value="Nintendo DS">Nintendo DS</option>
+                    <option value="PC">PC</option>
+                    <option value="PlayStation">PlayStation</option>
+                    <option value="PlayStation 2">PlayStation 2</option>
+                    <option value="PlayStation 3">PlayStation 3</option>
+                    <option value="PlayStation 4">PlayStation 4</option>
+                    <option value="PlayStation Portable">PlayStation Portable</option>
+                    <option value="PlayStation Vita">PlayStation Vita</option>
+                    <option value="Saturn">Saturn</option>+
+                    <option value="Sega CD">Sega CD</option>
+                    <option value="Super NES">Super NES</option>
+                    <option value="TurboGrafx-16">TurboGrafx-16</option>
+                    <option value="Wii">Wii</option>
+                    <option value="Wii U">Wii U</option>
+                    <option value="Xbox">Xbox</option>
+                    <option value="Xbox 360">Xbox 360</option>
+                    <option value="Xbox One">Xbox One</option>
+                </select>
+            </div>
+        </section>
+        <section class="formAddGameInputSection">
+            <div class="formAddGameInputSectionElement">
+                <div class="formAddGameInputElement">
+                    <label class="labelText" for="addGameYear">Year:</label>
+                    <input class="formAddGameInputBar" type="text" id="addGameYear" name="addGameYear">
+                </div>
+            </div>
+            <div class="formAddGameInputSectionElement">
+                <div class="formAddGameInputElement">
+                    <label class="labelText" for="addGameGlobalSales">Global Sales:</label>
+                    <input class="formAddGameInputBar" type="text" id="addGameGlobalSales" name="addGameGlobalSales">
+                </div>
+            </div>
+            <div class="formAddGameInputSectionElement">
+                <div class="formAddGameInputElement">
+                    <label class="labelText" for="addGameIGNScore">IGN Score:</label>
+                    <input class="formAddGameInputBar" type="text" id="addGameIGNScore" name="addGameIGNScore">
+                </div>
+            </div>
+        </section>
+        <div class="formSubmit">
+            <button class="submitButtonStyle" id="addGameButtton">
+                Add Game
+            </button>
+        </div>
+    </form>
+
+
 </section>
 
-<section class="gameInformationOutputSectionTitle">
-    <h2>Results:</h2>
-</section>
 
 <section class="container-fluid gameInformationOutputSection">
+
 
     <section>
         <ul class="gameInformationUnorderdedOutputList">
