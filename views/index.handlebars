@@ -140,10 +140,10 @@
             <div class="formAddGameInputSectionElement">
                 <div class="formAddGameInputElement">
                     <label class="labelText" for="addGameYear">Year:</label>
-                    <input class="formAddGameInputBar" type="number" min = "1980" id="addGameYear" name="addGameYear">
+                    <input class="formAddGameInputBar" type="number" min="1980" id="addGameYear" name="addGameYear">
                 </div>
             </div>
-             <div class="formAddGameInputSectionElement">
+            <div class="formAddGameInputSectionElement">
                 <div class="formAddGameInputElement">
                     <label class="labelText" for="addGameGlobalSales">Publisher:</label>
                     <input class="formAddGameInputBar" type="text" id="addGamePublisher" name="addGamePublisher">
@@ -152,13 +152,15 @@
             <div class="formAddGameInputSectionElement">
                 <div class="formAddGameInputElement">
                     <label class="labelText" for="addGameGlobalSales">Global Sales:</label>
-                    <input class="formAddGameInputBar" type="number" min="0" id="addGameGlobalSales" name="addGameGlobalSales">
+                    <input class="formAddGameInputBar" type="number" min="0" id="addGameGlobalSales"
+                        name="addGameGlobalSales">
                 </div>
             </div>
             <div class="formAddGameInputSectionElement">
                 <div class="formAddGameInputElement">
                     <label class="labelText" for="addGameIGNScore">IGN Score:</label>
-                    <input class="formAddGameInputBar" type="number" min= "0" max = "10" id="addGameIGNScore" name="addGameIGNScore">
+                    <input class="formAddGameInputBar" type="number" min="0" max="10" id="addGameIGNScore"
+                        name="addGameIGNScore">
                 </div>
             </div>
         </section>
@@ -183,15 +185,16 @@
                 <section class="gameInfoOutputTitleSection">
                     <p class="gameInfoOutputGameTitle">{{this.name}}</p>
                 </section>
-                <section class="gameInfoOutputGameImageSection">
+                {{!-- <section class="gameInfoOutputGameImageSection">
                     <img class="gameInfoOutputGameImage" src="https://placedog.net/300/300?random">
-                </section>
+                </section> --}}
 
                 <section class="gameInformationOutputDataSection">
 
                     <div class="gameInformationOutputDataOutputElement">
                         <p class="gameInformationOutputDataOutputElementTitle">Platform:
-                        <p class="gameInfoOutputGamePlatform gameInformationOutputDataOutputElementOutput">{{this.platform}}</p>
+                        <p class="gameInfoOutputGamePlatform gameInformationOutputDataOutputElementOutput">
+                            {{this.platform}}</p>
                     </div>
 
                     <div class="gameInformationOutputDataOutputElement">
