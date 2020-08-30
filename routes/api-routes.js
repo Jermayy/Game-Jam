@@ -21,7 +21,7 @@ module.exports = app => {
   app.get("/api/gamesgenreplatform/:name/:genre/:platform", (req, res) => {
     db.sequelize
       .query(
-        "SELECT * from games join scores on games.name = scores.game and games.platform = scores.platform where ((game like ?) and (scores.genre like ?)) and ((game like ?) and (scores.platform like ?));",
+        "SELECT * from games join scores on games.name = scores.game and games.platform = scores.platform where ((game like ?) and (scores.genre like ?)) and ((game like ?) and (scores.platform like ?)) order by scores.score desc;",
         {
           replacements: [
             "%" + req.params.name + "%",
@@ -43,7 +43,7 @@ module.exports = app => {
   app.get("/api/gamesgenre/:name/:genre", (req, res) => {
     db.sequelize
       .query(
-        "SELECT * from games join scores on games.name = scores.game and games.platform = scores.platform where ((game like ?) and (scores.genre like ?))",
+        "SELECT * from games join scores on games.name = scores.game and games.platform = scores.platform where ((game like ?) and (scores.genre like ?)) order by scores.score desc",
         {
           replacements: [
             "%" + req.params.name + "%",
@@ -63,7 +63,7 @@ module.exports = app => {
   app.get("/api/gamesplatforms/:name/:platform", (req, res) => {
     db.sequelize
       .query(
-        "SELECT * from games join scores on games.name = scores.game and games.platform = scores.platform where ((game like ?) and (scores.platform like ?));",
+        "SELECT * from games join scores on games.name = scores.game and games.platform = scores.platform where ((game like ?) and (scores.platform like ?)) order by scores.score desc;",
         {
           replacements: [
             "%" + req.params.name + "%",
@@ -83,7 +83,7 @@ module.exports = app => {
   app.get("/api/games/:name", (req, res) => {
     db.sequelize
       .query(
-        "SELECT * from games join scores on games.name = scores.game and games.platform = scores.platform where game like ?;",
+        "SELECT * from games join scores on games.name = scores.game and games.platform = scores.platform where game like ? order by scores.score desc;",
         {
           replacements: ["%" + req.params.name + "%"],
           type: Sequelize.QueryTypes.SELECT
