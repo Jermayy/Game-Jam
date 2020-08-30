@@ -260,6 +260,9 @@
 .formAddGameInputBar:focus {
     outline: none;
 }
+.formAddGameInputSectionFiller {
+    height: 75px;
+}
 
 /* Game Information Output Section */
 .gameInformationOutputSection {
@@ -355,10 +358,16 @@
     justify-content: center;
 }
 
-.gameInfoOutputGlobalSalesSectionBody {
+.gameInfoOutputGlobalSalesSectionGlobalSalesOutputBody {
     padding: 20px;
     margin: 0 10px 10px 10px;
-    background-color: rgb(255, 217, 0);
+    border: solid  rgb(255, 217, 0);
+}
+
+.gameInfoOutputIGNScoreOutputBody {
+    padding: 20px;
+    margin: 0 10px 10px 10px;
+    border: solid  rgb(255, 217, 0);
 }
 
 .gameInfoOutputGlobalSalesTitle {
@@ -366,6 +375,17 @@
     text-align: center;
     font-size: 15px;
     font-weight: bold;
+    color: rgb(255, 217, 0);
+    display: flex;
+    justify-content: center;
+}
+
+.gameInfoOutputIGNScoreOutputTitle {
+    margin: 0px 0px 15px 0px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(255, 217, 0);
     display: flex;
     justify-content: center;
 }
@@ -373,9 +393,20 @@
 .gameInfoOutputGlobalSalesOutput {
     text-align: center;
     font-size: 15px;
+    color:rgb(130, 34, 255);
     display: flex;
     justify-content: center;
 }
+
+.gameInfoOutputIGNScoreOutput {
+    text-align: center;
+    font-size: 15px;
+    color:rgb(130, 34, 255);
+    display: flex;
+    justify-content: center;
+}
+
+
 
 
 /* Naviation Bar 600px Media Break */

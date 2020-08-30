@@ -64,6 +64,9 @@
                 </select>
             </div>
         </section>
+        <section class="formAddGameInputSectionFiller">
+
+        </section>
         <div class="formSubmit">
             <button class="submitButtonStyle" id="submitBtn">
                 Search
@@ -215,13 +218,16 @@
                 </section>
 
                 <section class="gameInfoOutputGlobalSalesSection">
-                    <div class="gameInfoOutputGlobalSalesSectionBody">
+                    <div class="gameInfoOutputGlobalSalesSectionGlobalSalesOutputBody">
                         <p class="gameInfoOutputGlobalSalesTitle">Global Sales:</p>
                         <p class="gameInfoOutputGlobalSalesOutput">{{this.Global_Sales}} million copies</p>
                     </div>
-                    <div class="gameInfoOutputGlobalSalesSectionBody">
-                        <p class="gameInfoOutputGlobalSalesTitle">IGN Score:</p>
-                        <p class="gameInfoOutputGlobalSalesOutput">{{this.score}}</p>
+                    <div class="gameInfoOutputIGNScoreOutputBody">
+                        <p class="gameInfoOutputIGNScoreOutputTitle">IGN Score:</p>
+                        <p class="gameInfoOutputIGNScoreOutput">{{this.score}}</p> {{!-- Default Color --}}
+                        {{!-- <p class="gameInfoOutputIGNScoreOutput" style="color: rgb(0, 255, 0);">{{this.score}}</p> --}}
+                        {{!-- <p class="gameInfoOutputIGNScoreOutput" style="color: rgb(255, 187, 0);>{{this.score}}</p> --}}
+                        {{!-- <p class="gameInfoOutputIGNScoreOutput" style="color: rgb(255, 81, 81);>{{this.score}}</p> --}}
                     </div>
                 </section>
             </li>
