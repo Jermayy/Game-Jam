@@ -391,6 +391,7 @@
 }
 
 .gameInfoOutputGlobalSalesOutput {
+    margin: 0px 0px 5px 0px;
     text-align: center;
     font-size: 15px;
     color:rgb(130, 34, 255);
@@ -399,7 +400,9 @@
 }
 
 .gameInfoOutputIGNScoreOutput {
+    padding: 25px 0px 25px 0px;
     text-align: center;
+    font-weight: bold;
     font-size: 15px;
     color:rgb(130, 34, 255);
     display: flex;

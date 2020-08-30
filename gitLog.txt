@@ -1,0 +1,446 @@
+commit 627638f1764df99090be10b85606311ac0d48b96
+Author: Mo Pishdar <mohpish@gmail.com>
+Date:   Sun Aug 30 19:24:18 2020 +1000
+
+    results are now ordered by IGN scores
+
+commit 19db745ea1cde90a0f34d3adf4e927512807f1e5
+Author: Mo Pishdar <mohpish@gmail.com>
+Date:   Sun Aug 30 19:19:45 2020 +1000
+
+    scores are now color coded for better visuals
+
+commit 5d20376581823420d7f6171bd4e3b0ead65340c4
+Author: Jeremy <jeremyVDLRC@gmail.com>
+Date:   Sun Aug 30 16:56:39 2020 +1000
+
+    add additional captions to screenshots
+
+commit 42cd0ccb7d400080eb3f0d16c3bd87ebe78ee1cc
+Author: Jeremy <jeremyVDLRC@gmail.com>
+Date:   Sun Aug 30 16:22:13 2020 +1000
+
+    First Commit Readme
+
+commit 6cb8b062d2a2fb5623f6da6035db7426de59f7c8
+Author: Jeremy <jeremyVDLRC@gmail.com>
+Date:   Sun Aug 30 16:16:30 2020 +1000
+
+    Add screenshots for Readme file
+
+commit a177fa6a5db1dd2104df44ac58870183bc6ccc72
+Author: Andrew Bui <andrew.bui.au@gmail.com>
+Date:   Sun Aug 30 12:18:17 2020 +1000
+
+    resdesigned global sales and ign score output to be not as in your face
+
+commit 5d544a3b7bdb069e598d1e31b04c6f8af88637e0
+Author: Andrew Bui <andrew.bui.au@gmail.com>
+Date:   Sun Aug 30 11:46:04 2020 +1000
+
+    further layout changes done to output using display:flex to justify-content: space-between
+
+commit 804d8e6b1d33bedde20735a4eda0f7999dcfefe5
+Author: Andrew Bui <andrew.bui.au@gmail.com>
+Date:   Sun Aug 30 11:36:36 2020 +1000
+
+    removed placeholder images for game outputs and tested add game functionality, result: functioning 100%
+
+commit c43d771f7eef829a44b85e094d847aa3aa4a0144
+Author: Mo Pishdar <mohpish@gmail.com>
+Date:   Sun Aug 30 08:45:53 2020 +1000
+
+    tried my best to implement some logic to make use of an external API but couldn't make it due to some technical barriers
+
+commit 8f4c4fadac3dd6715eb93e7d66a04754b8824e5d
+Author: Mo Pishdar <mohpish@gmail.com>
+Date:   Sat Aug 29 23:58:38 2020 +1000
+
+    we can now create new games in our databse that will be added to both of our tables and could be searched in our search a game section. I have also added all the required validations to add a game input fields to ensure that the user only inputs values in correct format rquired to populate our tables
+
+commit 2ed1bfa963ab7026011ca4598a7eba05eeaaec36
+Author: Mo Pishdar <mohpish@gmail.com>
+Date:   Sat Aug 29 20:27:22 2020 +1000
+
+    fixed a minor bug when searching for a game also populated the game search input box for add a game section
+
+commit 073403d61ae10d92ebd152ee6ae41b223c972f55
+Author: Andrew Bui <andrew.bui.au@gmail.com>
+Date:   Sat Aug 29 16:12:02 2020 +1000
+
+    layout new responsive to mobile
+
+commit 148256859c6b935e32ae6df8ba2767df7fb8bf89
+Author: Andrew Bui <andrew.bui.au@gmail.com>
+Date:   Sat Aug 29 13:13:39 2020 +1000
+
+    added output to display ign score
+
+commit d7ddb6b2e88a01f5559455fe7bc0ea3942067e05
+Author: Andrew Bui <andrew.bui.au@gmail.com>
+Date:   Sat Aug 29 12:08:56 2020 +1000
+
+    added input elements to add games to the database
+
+commit b86ab50256644f92c7dc5617f0edbc79b1ea4815
+Author: Andrew Bui <andrew.bui.au@gmail.com>
+Date:   Sat Aug 29 10:45:04 2020 +1000
+
+    updated output section to properly display with wrap
+
+commit d637c0f803af2ff5083a2c730e9224a692a30646
+Author: Mo Pishdar <mohpish@gmail.com>
+Date:   Sat Aug 29 02:46:33 2020 +1000
+
+    basic post routes implemented for both tables with only necessary fields to update and tested using Postman
+
+commit 5a95694ed5275b1a0fcb9fccf8c42aaaf13bcfc4
+Author: Mo Pishdar <mohpish@gmail.com>
+Date:   Sat Aug 29 02:21:29 2020 +1000
+
+    fixed a minor bug with populateInputFields() function that prevented the value of platform be retained when we just searched for a game and a platform with no genre selected
+
+commit 21129f587001162701441059904a5e4cd62e4c97
+Author: Mo Pishdar <mohpish@gmail.com>
+Date:   Sat Aug 29 02:13:20 2020 +1000
+
+    search field and dropdown lists now  will retain their previous state when the original search was made so user can see what he did search for
+
+commit eb914bc558592786e3ba61a9b7734cb0bb0ec132
+Merge: 59b23a2 7bad4b4
+Author: Mo Pishdar <mohpish@gmail.com>
+Date:   Fri Aug 28 15:00:12 2020 +1000
+
+    accepted the merge
+
+commit 59b23a2b229eab1d008f1ea171722a8e7786954a
+Author: Mo Pishdar <mohpish@gmail.com>
+Date:   Fri Aug 28 14:56:51 2020 +1000
+
+    page now render results of the search by redirecting to the appropriate urls
+
+commit 7bad4b41bd36cd3ecd6a9279e1a4282fd13ca87a
+Author: Andrew Bui <andrew.bui.au@gmail.com>
+Date:   Thu Aug 27 23:51:07 2020 +1000
+
+    front end phase one complete: index.handlebars and main.handlebars have css successfully applied
+
+commit 4e8000bfaa39124b54121de6438090eae6d76ea1
+Author: Andrew Bui <andrew.bui.au@gmail.com>
+Date:   Thu Aug 27 23:31:40 2020 +1000
+
+    update css to implement game information output items
+
+commit e5ee904522beb2793728f3d3e3970bcaa067c11f
+Merge: 4361e2b bd8594d
+Author: Jeremy <jeremyVDLRC@gmail.com>
+Date:   Thu Aug 27 22:01:31 2020 +1000
+
+    Merge branch 'master' of github.com:Jermayy/Project_2
+
+commit 4361e2b03f7377ad72fd0ae599badc4f1ad40469
+Author: Jeremy <jeremyVDLRC@gmail.com>
+Date:   Thu Aug 27 22:01:15 2020 +1000
+
+    url for api query for images commented
+
+commit bd8594d47b22cd648907a6a71652970e9207d142
+Author: Andrew Bui <andrew.bui.au@gmail.com>
+Date:   Thu Aug 27 21:29:06 2020 +1000
+
+    fixed issue where dropdown input is overwritten by padding styling
+
+commit a41a6d8a9ce0b4962fee07c86b0e15b00cc2667b
+Author: Andrew Bui <andrew.bui.au@gmail.com>
+Date:   Thu Aug 27 21:05:50 2020 +1000
+
+    initialised css for item output
+
+commit d3f798dfce628ea2e911485e477f1ec1cac27962
+Author: Andrew Bui <andrew.bui.au@gmail.com>
+Date:   Thu Aug 27 18:43:30 2020 +1000
+
+    layout changes to the forms implemented
+
+commit 242a8675835a15ac9c64ede68572a07984fc6e82
+Author: Andrew Bui <andrew.bui.au@gmail.com>
+Date:   Thu Aug 27 16:51:32 2020 +1000
+
+    added footer section website
+
+commit 25351ee6ba716ca97fc1fde061731353785e8e21
+Author: Andrew Bui <andrew.bui.au@gmail.com>
+Date:   Thu Aug 27 16:15:17 2020 +1000
+
+    refactored css and html layout code into handlebar files for outpur reference
+
+commit 2042fc3b490b05d115f7e5cfe975c1d7593eedd5
+Author: Andrew Bui <andrew.bui.au@gmail.com>
+Date:   Thu Aug 27 16:11:42 2020 +1000
+
+    updated form input area of main page
+
+commit 9880a639c03699f9b23bec4f1517e852c7e114d7
+Author: Andrew Bui <andrew.bui.au@gmail.com>
+Date:   Thu Aug 27 13:31:07 2020 +1000
+
+    added transitional hover effects to team logo on hero cover
+
+commit 7f5abc79b920f8fde32b7fb067910fbcd8408216
+Author: Andrew Bui <andrew.bui.au@gmail.com>
+Date:   Thu Aug 27 13:17:49 2020 +1000
+
+    updated output section using html and css
+
+commit 3f92770c7232e24757246f27cfb0d4602246468a
+Author: Andrew Bui <andrew.bui.au@gmail.com>
+Date:   Thu Aug 27 00:01:07 2020 +1000
+
+    removed navigation bar header and embedded navigational button bar into the top of the hero cover
+
+commit 114123469394f3e5960d83a5af87495363ed64a3
+Author: Andrew Bui <andrew.bui.au@gmail.com>
+Date:   Wed Aug 26 23:39:11 2020 +1000
+
+    updated main.handlebars cover with html and css styling, specifically added a social media array
+
+commit 90aade5b8c53145e6401751450821c0d1438502b
+Author: Andrew Bui <andrew.bui.au@gmail.com>
+Date:   Wed Aug 26 23:32:20 2020 +1000
+
+    finalised game jam cover image
+
+commit ce265311a5024bbdb5be1cab7e9dde9f34e2d1d2
+Author: Andrew Bui <andrew.bui.au@gmail.com>
+Date:   Wed Aug 26 21:20:17 2020 +1000
+
+    initialised pre-front-end components to test deployment
+
+commit 42a17a912ec6aae53632029a89bd925bdde19b86
+Author: Mo Pishdar <mohpish@gmail.com>
+Date:   Wed Aug 26 20:32:45 2020 +1000
+
+    search logic completely modified with additional api routes for different search filters
+
+commit a1338e86afb0db56aee97d103420b00e444d962d
+Merge: 5bffe18 27d013e
+Author: Mo Pishdar <mohpish@gmail.com>
+Date:   Wed Aug 26 19:14:23 2020 +1000
+
+    modified seach logic in api routes
+
+commit 5bffe18c8f7228361456c260e13cb308ce53e747
+Author: Mo Pishdar <mohpish@gmail.com>
+Date:   Wed Aug 26 19:05:56 2020 +1000
+
+    modifyed search logic so it can include multiple search terms
+
+commit 27d013ee2dbcabd0745a46a1ed77e01335438f07
+Merge: 20d5330 bd6f4e3
+Author: Andrew Bui <andrew.bui.au@gmail.com>
+Date:   Tue Aug 25 22:04:36 2020 +1000
+
+    Merge branch 'master' of github.com:Jermayy/Project_2 into master
+
+commit 20d533000fdd5796adac40ffe904ede73c565715
+Author: Andrew Bui <andrew.bui.au@gmail.com>
+Date:   Tue Aug 25 22:03:59 2020 +1000
+
+    committing initial html and css files with new website design layout
+
+commit bd6f4e300b3efcd2a824a241455439ec5dc38c59
+Merge: 46aea24 13734ce
+Author: Jeremy <jeremyVDLRC@gmail.com>
+Date:   Tue Aug 25 21:44:28 2020 +1000
+
+    Merge branch 'master' of github.com:Jermayy/Project_2
+
+commit 46aea2492bbbc0ce59b14cc46e0c8dce0146f2c0
+Author: Jeremy <jeremyVDLRC@gmail.com>
+Date:   Tue Aug 25 21:44:22 2020 +1000
+
+    added basic search query and console results
+
+commit 13734cedb64a92a8098f7279f311c7149b8a0004
+Author: Andrew Bui <andrew.bui.au@gmail.com>
+Date:   Tue Aug 25 21:41:58 2020 +1000
+
+    added navigational bar to base html file
+
+commit 45cb588593208ebb32db2f205ff71050a5df33e0
+Author: Jeremy <jeremyVDLRC@gmail.com>
+Date:   Tue Aug 25 19:34:57 2020 +1000
+
+    Add environment variable for db
+
+commit 70275267c9e03e4759ab7f916d93e7910cbff3bf
+Author: Jeremy <jeremyVDLRC@gmail.com>
+Date:   Tue Aug 25 19:24:45 2020 +1000
+
+    install new handlebar dependancy
+
+commit ae959cabc8fe87b71367c557a8f8d5699cd4f1fe
+Author: Jeremy <jeremyVDLRC@gmail.com>
+Date:   Tue Aug 25 19:14:12 2020 +1000
+
+    added drop database statement
+
+commit 3ed50bd52cb81e79cfbb99dcf96a46d312086249
+Author: Mo Pishdar <mohpish@gmail.com>
+Date:   Tue Aug 25 05:53:47 2020 +1000
+
+    route for doing a partial search for a given keyword to find all instances of the game from a SQL join was successfuly written using raw queires in sequelize and it worksgit status!
+
+commit 162d1fbbcf1d9e616aa80432a765e02e0ef983ae
+Author: Mo Pishdar <mohpish@gmail.com>
+Date:   Tue Aug 25 02:57:43 2020 +1000
+
+    updated the games sales data table so now it has similar platform abbreviations as the scores table that helps expanding our join by almost 6 times!
+
+commit c7089d4b2a49810d6cb5b244eac3f63fc98b2d9f
+Author: Mo Pishdar <mohpish@gmail.com>
+Date:   Tue Aug 25 00:35:56 2020 +1000
+
+    fixed relative address to javascript file inside the static folder in main handlebars script tag
+
+commit 349c815e4a635a44e089722c020a6ffa3b2216bb
+Author: Mo Pishdar <mohpish@gmail.com>
+Date:   Tue Aug 25 00:12:27 2020 +1000
+
+    installed @handlebars/allow-prototype-access
+    package to be able to use prototype using handlebars and rendered first results on the index page using handlbars
+
+commit d35de74ac1396bfb1ae4c111cbbbde1c9c6a8b4a
+Author: Andrew Bui <andrew.bui.au@gmail.com>
+Date:   Mon Aug 24 21:40:31 2020 +1000
+
+    finalised main.handlebars, gameSalesData.handlebars and reviewScores.handlebars.
+
+commit 31c241e55a5da249bbcb1f562b89cffd376379f5
+Author: Andrew Bui <andrew.bui.au@gmail.com>
+Date:   Mon Aug 24 21:05:14 2020 +1000
+
+    initialised main.handlebars and index.handlebars with more html
+
+commit ab5f3295204d61c9145fe29c89a682e10daf62df
+Author: Andrew Bui <andrew.bui.au@gmail.com>
+Date:   Mon Aug 24 20:53:15 2020 +1000
+
+    initialised main.handlebars and index.handlebars with html markup
+
+commit cc216f365582a87424fdc7ab9e9a8c58856bdf74
+Author: Andrew Bui <andrew.bui.au@gmail.com>
+Date:   Mon Aug 24 19:59:06 2020 +1000
+
+    initialised handlebars with basic html
+
+commit a623f3a539619edec81a7792ea6b3f4295af2615
+Author: Mo Pishdar <mohpish@gmail.com>
+Date:   Mon Aug 24 17:34:10 2020 +1000
+
+    added csv seed files to our database folder
+
+commit 59b5759fa42cd9e0a8b58e2cbbd2b25dff7b5c86
+Merge: 5d2beac 7916feb
+Author: Andrew Bui <andrew.bui.au@gmail.com>
+Date:   Sat Aug 22 10:54:15 2020 +1000
+
+    Merge branch 'master' of github.com:Jermayy/Project_2 into master
+
+commit 5d2beacd7935266db38165b3f57a9a0db415945f
+Author: Andrew Bui <andrew.bui.au@gmail.com>
+Date:   Sat Aug 22 10:53:33 2020 +1000
+
+    amended logo asset location issues: existing logos were placed inside the views folder and have been moved into a public/images/ folder
+
+commit 7916feb59a8c8dd6d47ecdcc6d807fa80a4467d8
+Merge: c76b243 7285981
+Author: Mo Pishdar <mohpish@gmail.com>
+Date:   Sat Aug 22 01:03:29 2020 +1000
+
+    Merge branch 'master' of github.com:Jermayy/Project_2
+
+commit c76b24397c97e2ee48fba7aedfdc192c8206d6ad
+Author: Mo Pishdar <mohpish@gmail.com>
+Date:   Sat Aug 22 01:03:05 2020 +1000
+
+    found a way to use raw queries in sequelize when we need to run a complicated query that may not be easy to run using sequlize syntax
+
+commit 7285981632373ca31bdd358e204de3c4d046b9fd
+Author: Andrew Bui <andrew.bui.au@gmail.com>
+Date:   Fri Aug 21 11:37:38 2020 +1000
+
+    added GAME JAM team logo to repo into views/assets
+
+commit 76c1e2dcde7bf6e376141f0f479968759cb790af
+Author: Mo Pishdar <mohpish@gmail.com>
+Date:   Fri Aug 21 00:52:54 2020 +1000
+
+    ign review scores table was also added so now we have two tables to work with and can search for those games who also has a review score on ign
+
+commit 958f87f8e1c1b0d218fd8fcf79660058f60a5c2d
+Author: Mo Pishdar <mohpish@gmail.com>
+Date:   Thu Aug 20 21:47:06 2020 +1000
+
+    folders for static content and handlebars added and handlebars npm package installed
+
+commit 0b0d0022c81f9f5007f05874fb0d5bf27b7b7fe9
+Author: Mo Pishdar <mohpish@gmail.com>
+Date:   Thu Aug 20 21:27:12 2020 +1000
+
+    fixed problem with losing data in our database by removing the force command in sequelize
+
+commit f35aa4c3186967439a7ca1ed8ca25adc61a789ce
+Author: Mo Pishdar <mohpish@gmail.com>
+Date:   Thu Aug 20 21:03:47 2020 +1000
+
+    api routes now work
+
+commit 3bed19c91407917319a79d6f610ea4bc15882950
+Author: Mo Pishdar <mohpish@gmail.com>
+Date:   Thu Aug 20 20:18:04 2020 +1000
+
+    table for games created in database and populated with our csv data
+
+commit 3b79683a47c9a1bd010d08a900b0e9017e7cdc2b
+Merge: 084c94a 85d7204
+Author: Jeremy <jeremyVDLRC@gmail.com>
+Date:   Thu Aug 20 18:59:55 2020 +1000
+
+    Merge branch 'master' of github.com:Jermayy/Project_2
+
+commit 084c94a66c6d2b6bc426b4e7e23b078d5a0a6f7e
+Author: Jeremy <jeremyVDLRC@gmail.com>
+Date:   Thu Aug 20 18:59:49 2020 +1000
+
+    added seed.sql file
+
+commit 85d7204cbd89c706194f8181235295db0821253e
+Author: Andrew Bui <andrew.bui.au@gmail.com>
+Date:   Thu Aug 20 18:59:38 2020 +1000
+
+    adding initial html and css files
+
+commit 28166ab252ff6a34be031c026eb994935ae9c449
+Author: Mo Pishdar <mohpish@gmail.com>
+Date:   Thu Aug 20 18:49:45 2020 +1000
+
+    basic structural files and folders
+
+commit 5f41b283e76e00d9474cf95da1299cefb8e20c1d
+Author: Jeremy <jeremyVDLRC@gmail.com>
+Date:   Tue Aug 18 20:13:13 2020 +1000
+
+    initial commit
+
+commit 23151e69536821cc2a85ccc500adf74761372601
+Author: Jeremy <jeremyVDLRC@gmail.com>
+Date:   Tue Aug 18 19:50:50 2020 +1000
+
+    add .travis.yml file
+
+commit e0b9603993eeae87840e90e85c206bbb89db0100
+Author: Jermayy <61235165+Jermayy@users.noreply.github.com>
+Date:   Tue Aug 18 18:45:05 2020 +1000
+
+    Initial commit
