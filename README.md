@@ -14,18 +14,32 @@
 An application that allows the user to search for their favourite games based on name search, with the ability to further filter results with video game platform and genre of game. Based on the provided search parameters, users will be returned a list of games that satisfy the user's nominated parameters.
 Each game returned has the game's title, platform the game is on, release year, genre of game, plublisher, total global unit sales and rating/score as per IGN.com.
 
+*Main Web Page Graphic*
 ![](/screenshots/mainTitleScreenshot.png)
 
+
+
+*User inputs their desired search parameters*
 ![](/screenshots/searchGameScreenshot.png)
 
+
+
+*Results rendered beneath the search box*
 ![](/screenshots/searchResultScreenshot.png)
 
 Additionally, users can add their own entries into the game database, where user's can enter a game title, genre, platform, release year, publisher, global unit sales (in millions) and review score which will then appear as a result when searched.
 
+*User enters information for new game*
 ![](/screenshots/addGameScreenshot.png)
 
+
+
+*Searching for new game added by user*
 ![](/screenshots/addGameSearchScreenshot.png)
 
+
+
+*User's new game returned as a result in search*
 ![](/screenshots/addGameResultScreenshot.png)
 
 
