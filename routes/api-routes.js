@@ -21,13 +21,13 @@ module.exports = app => {
   app.get("/api/gamesgenreplatform/:name/:genre/:platform", (req, res) => {
     db.sequelize
       .query(
-        "SELECT * from games join scores on games.name = scores.game and games.platform = scores.platform where ((game like ?) and (scores.genre like ?)) and ((game like ?) and (scores.platform like ?)) order by scores.score desc;",
+        "SELECT * from games join scores on games.name = scores.game and games.platform = scores.platform where ((game like ?) and (scores.genre like ?)) and ((game like ?) and (scores.platform = ?)) order by scores.score desc;",
         {
           replacements: [
             "%" + req.params.name + "%",
             "%" + req.params.genre + "%",
             "%" + req.params.name + "%",
-            "%" + req.params.platform + "%"
+            req.params.platform
           ],
           type: Sequelize.QueryTypes.SELECT
         }
@@ -63,12 +63,9 @@ module.exports = app => {
   app.get("/api/gamesplatforms/:name/:platform", (req, res) => {
     db.sequelize
       .query(
-        "SELECT * from games join scores on games.name = scores.game and games.platform = scores.platform where ((game like ?) and (scores.platform like ?)) order by scores.score desc;",
+        "SELECT * from games join scores on games.name = scores.game and games.platform = scores.platform where ((game like ?) and (scores.platform = ?)) order by scores.score desc;",
         {
-          replacements: [
-            "%" + req.params.name + "%",
-            "%" + req.params.platform + "%"
-          ],
+          replacements: ["%" + req.params.name + "%", req.params.platform],
           type: Sequelize.QueryTypes.SELECT
         }
       )
