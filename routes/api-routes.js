@@ -121,19 +121,19 @@ module.exports = app => {
     });
   });
 
-  app.get("/api/games", (req, res) => {
-    // findAll returns all entries for a table when used with no options
-    db.Game.findAll({}).then(dbGame => {
-      // We have access to the todos as an argument inside of the callback function
-      res.json(dbGame);
-    });
-  });
+  // app.get("/api/games", (req, res) => {
+  //   // findAll returns all entries for a table when used with no options
+  //   db.Game.findAll({}).then(dbGame => {
+  //     // We have access to the games as an argument inside of the callback function
+  //     res.json(dbGame);
+  //   });
+  // });
 
-  app.get("/api/scores", (req, res) => {
-    // findAll returns all entries for a table when used with no options
-    db.Score.findAll({}).then(dbScore => {
-      // We have access to the todos as an argument inside of the callback function
-      res.json(dbScore);
-    });
-  });
+  // app.get("/api/scores", (req, res) => {
+  //   // findAll returns all entries for a table when used with no options
+  //   db.Score.findAll({}).then(dbScore => {
+  //     // We have access to the scores as an argument inside of the callback function
+  //     res.json(dbScore);
+  //   });
+  // });
 };

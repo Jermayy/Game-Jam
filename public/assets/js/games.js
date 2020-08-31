@@ -180,7 +180,7 @@ $(document).ready(() => {
 
       //redirecting the page to the new url to display the results using handlbars
       window.location.replace(
-        "http://localhost:8080/api/games/" + gameNameValue
+        "https://fullstackproject-2.herokuapp.com/api/games/" + gameNameValue
       );
     } else if (genreValue === "none") {
       $.get(
@@ -191,7 +191,7 @@ $(document).ready(() => {
       );
       //redirecting the page to the new url to display the results using handlbars
       window.location.replace(
-        "http://localhost:8080/api/gamesplatforms/" +
+        "https://fullstackproject-2.herokuapp.com/api/gamesplatforms/" +
           gameNameValue +
           "/" +
           platformValue
@@ -206,7 +206,7 @@ $(document).ready(() => {
       });
       //redirecting the page to the new url to display the results using handlbars
       window.location.replace(
-        "http://localhost:8080/api/gamesgenre/" +
+        "https://fullstackproject-2.herokuapp.com/api/gamesgenre/" +
           gameNameValue +
           "/" +
           genreValue
@@ -229,7 +229,7 @@ $(document).ready(() => {
       );
       //redirecting the page to the new url to display the results using handlbars
       window.location.replace(
-        "http://localhost:8080/api/gamesgenreplatform/" +
+        "https://fullstackproject-2.herokuapp.com/api/gamesgenreplatform/" +
           gameNameValue +
           "/" +
           genreValue +
