@@ -1,20 +1,20 @@
 {
     "development": {
-        "dialect": "mysql",
-        "use_env_variable": "GAMES_DB_URL"
+        "username": "root",
+        "password": "",
+        "database": "gamesdb",
+        "host": "127.0.0.1",
+        "dialect": "mysql"
     },
     "test": {
         "username": "root",
         "password": "",
-        "database": "database_test",
+        "database": "gamesdb_test",
         "host": "127.0.0.1",
         "dialect": "mysql"
     },
     "production": {
-        "username": "root",
-        "password": "",
-        "database": "database_production",
-        "host": "127.0.0.1",
-        "dialect": "mysql"
+        "dialect": "mysql",
+        "use_env_variable": "JAWSDB_URL"
     }
 }
