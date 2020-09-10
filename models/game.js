@@ -1,7 +1,7 @@
+/* eslint-disable camelcase */
 module.exports = (sequelize, DataTypes) => {
   const Game = sequelize.define(
-    "Game",
-    {
+    "Game", {
       rank: {
         type: DataTypes.INTEGER
       },
@@ -51,8 +51,7 @@ module.exports = (sequelize, DataTypes) => {
       Global_Sales: {
         type: DataTypes.DECIMAL(4, 2)
       }
-    },
-    {
+    }, {
       timestamps: false
     }
   );
