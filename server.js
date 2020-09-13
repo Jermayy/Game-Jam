@@ -8,6 +8,7 @@ require("dotenv").config();
 // *** Dependencies
 // =============================================================
 const express = require("express");
+const compression = require("compression");
 
 // Sets up the Express App
 // =============================================================
@@ -16,6 +17,9 @@ const PORT = process.env.PORT || 8080;
 
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
+
+//Compress all responses
+app.use(compression());
 
 // Set Handlebars.
 const Handlebars = require("handlebars");
